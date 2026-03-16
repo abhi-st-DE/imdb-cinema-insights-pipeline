@@ -1,0 +1,30 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Pipeline logs
+logs/runs
+logs/*.log
+logs/queries
+
+# Temporary directories
+bruin_temp/
+tmp/
+
+# Ignore Antigravity local AI configurations
+.antigravity/mcp_config.json
+
+# Ignore duckdb database
+duckdb.db
+tmp
+
+# Ignore python cache
+__pycache__
+

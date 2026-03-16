@@ -1,0 +1,42 @@
+name: IMDb_pipeline
+schedule: daily
+start_date: 2024-03-18
+catchup: false
+
+default_connections:
+  duckdb: duckdb-default
+
+default:
+  hooks:
+    pre:
+      - query: "SET temp_directory = 'bruin_temp/';"
+      - query: "SET memory_limit = '8GB';"
+      - query: "SET preserve_insertion_order = false;"
+      - query: "SET threads = 4;"
+      - query: "PRAGMA max_temp_directory_size='50GB';"
+
+variables:
+  url:
+    type: string
+    default: "https://datasets.imdbws.com/"
+  name_basics:
+    type: string
+    default: "name.basics.tsv.gz"
+  title_basics:
+    type: string
+    default: "title.basics.tsv.gz"
+  title_akas:
+    type: string
+    default: "title.akas.tsv.gz"
+  title_crew:
+    type: string
+    default: "title.crew.tsv.gz"
+  title_episode:
+    type: string
+    default: "title.episode.tsv.gz"
+  title_principals:
+    type: string
+    default: "title.principals.tsv.gz"
+  title_ratings:
+    type: string
+    default: "title.ratings.tsv.gz"
