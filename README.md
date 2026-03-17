@@ -1,6 +1,6 @@
 # 🎬 IMDb Data Pipeline
 
-A production-grade data pipeline built with **[Bruin CLI](https://github.com/bruin-data/bruin)** and **DuckDB** that ingests, cleans, transforms, and analyzes the entire IMDb non-commercial dataset (~15M+ titles, ~13M+ people). The pipeline follows a strict layered architecture and powers three analytical reports and an interactive Streamlit dashboard.
+A production-grade data pipeline built with **[Bruin CLI](https://github.com/bruin-data/bruin)** and **DuckDB** that ingests, cleans, transforms, and analyzes the entire IMDb non-commercial dataset (~15M+ titles, ~13M+ people, ~11GB data, 500 million rows). The pipeline follows a strict layered architecture and powers three analytical reports and an interactive Streamlit dashboard.
 
 ---
 
