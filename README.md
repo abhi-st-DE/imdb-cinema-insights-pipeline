@@ -85,6 +85,8 @@ IMDb Datasets (7 .tsv.gz files, refreshed daily)
                                                                                    └──────────────┘
 ```
 
+![Bruin Lineage Graph](docs/images/pipeline_lineage.png)
+
 **Tech Stack**: Bruin CLI · DuckDB · SQL · Python · Streamlit · Plotly
 
 The pipeline is built using Bruin's native **`duckdb.sql`** asset type, ensuring optimal performance and seamless integration with DuckDB's analytical engine.
@@ -172,11 +174,25 @@ Calculates an **Architectural Integrity Score** per season by checking whether t
 
 An interactive **Streamlit** dashboard that visualizes the Underrated Gems report.
 
+![Dashboard Main Showcase](docs/images/dashboard_main.png)
+
 **Features:**
 - **Categorical Distribution**: Horizontal bar chart of gems grouped by region
 - **Temporal Distribution**: Area chart showing the volume of gems across release years
 - **Interactive Filters**: Search by title, filter by region, language, genre, and release period
 - **Summary Metrics**: Total gems found, average quality rating, regions represented, average votes
+
+### Multi-dimensional Analysis
+
+The dashboard reacts dynamically to complex filter combinations. Below, the system is filtering for specific regions, languages (English), and genres (Horror) simultaneously, updating the "Geography of Gems" and "Evolution of Treasures" visualizations in real-time:
+
+![Dashboard Filtering & Analysis](docs/images/dashboard_filtering.png)
+
+### Interactive Discovery & Search
+
+The dashboard enables deep-dive discovery using interactive Plotly charts and Streamlit sidebar filters. Below is an example of searching for specific titles (e.g., "Avengers") while maintaining categorical filters:
+
+![Dashboard Search & Filters](docs/images/dashboard_search.png)
 
 **To launch from the project root:**
 
@@ -349,6 +365,8 @@ imdb-cinema-insights-pipeline/
 ├── README.md                             # This file
 ├── dashboard/
 │   └── app.py                            # Streamlit dashboard (Underrated Cinema Gems)
+├── docs/
+│   └── images/                           # High-quality visual assets for documentation
 └── assets/
     ├── imdb_data_dict.md                 # IMDb dataset schema reference
     ├── ingestion/                        # Layer 1: Raw data ingestion (7 assets)
